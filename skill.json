@@ -1,0 +1,44 @@
+{
+  "name": "genpark-agentic-micropayment-escrow-settlement-gateway-skill",
+  "version": "1.0.0",
+  "description": "GenPark AI Agent Skill - Agentic machine-to-machine micropayment escrow settlement gateway verifying multi-sig escrow locks and instant receipt generation.",
+  "author": "genpark",
+  "category": "agentic-payments",
+  "tags": [
+    "micropayments",
+    "agent-escrow",
+    "m2m-settlement",
+    "agentic-wallet",
+    "crypto-fiat-settlement"
+  ],
+  "inputs": {
+    "payer_agent_wallet": {
+      "type": "string"
+    },
+    "payee_merchant_wallet": {
+      "type": "string"
+    },
+    "authorized_amount_usd": {
+      "type": "number"
+    },
+    "settlement_condition": {
+      "type": "string"
+    }
+  },
+  "outputs": {
+    "escrow_tx_id": {
+      "type": "string"
+    },
+    "escrow_state": {
+      "type": "string"
+    },
+    "cryptographic_receipt_hash": {
+      "type": "string"
+    },
+    "onchain_settlement_explorer_url": {
+      "type": "string"
+    }
+  },
+  "entrypoint": "client.py",
+  "example": "example_usage.py"
+}
